@@ -1,0 +1,87 @@
+/* 1. External font imports MUST come first */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* 2. Tailwind v4 */
+@import "tailwindcss";
+
+/* 3. Tailwind design tokens */
+@theme {
+  --color-col-todo:     #6366f1;
+  --color-col-progress: #f0a500;
+  --color-col-review:   #a855f7;
+  --color-col-done:     #10b981;
+
+  --font-sans: 'DM Sans', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+/* 4. Semantic theme variables — dark (default) */
+:root {
+  --k-bg-page:          #0b0d12;
+  --k-bg-surface:       #111318;
+  --k-bg-card:          #181b24;
+  --k-bg-card-hover:    rgba(39, 42, 56, 0.9);
+  --k-bg-input:         #1c2030;
+  --k-bg-modal:         #13151c;
+
+  --k-text-1:           #e2e5f0;
+  --k-text-2:           #8b92aa;
+  --k-text-3:           #5c6278;
+  --k-text-4:           #3d4256;
+
+  --k-border:           rgba(55, 62, 85, 0.7);
+  --k-border-input:     rgba(55, 62, 85, 0.9);
+  --k-border-col:       rgba(30, 35, 50, 0.9);
+
+  --k-header-bg:        rgba(11, 13, 18, 0.85);
+  --k-col-bg:           rgba(17, 19, 24, 0.5);
+  --k-col-border:       rgba(30, 35, 50, 0.85);
+  --k-scrollbar:        #272c3d;
+}
+
+/* 5. Light theme overrides */
+[data-theme="light"] {
+  --k-bg-page:          #eef0f7;
+  --k-bg-surface:       #f5f6fb;
+  --k-bg-card:          #ffffff;
+  --k-bg-card-hover:    #f0f2fa;
+  --k-bg-input:         #ffffff;
+  --k-bg-modal:         #ffffff;
+
+  --k-text-1:           #1a1d2e;
+  --k-text-2:           #4a5068;
+  --k-text-3:           #717899;
+  --k-text-4:           #9ba3c0;
+
+  --k-border:           rgba(160, 165, 200, 0.3);
+  --k-border-input:     rgba(160, 165, 200, 0.5);
+  --k-border-col:       rgba(160, 165, 200, 0.25);
+
+  --k-header-bg:        rgba(238, 240, 247, 0.9);
+  --k-col-bg:           rgba(255, 255, 255, 0.6);
+  --k-col-border:       rgba(160, 165, 200, 0.2);
+  --k-scrollbar:        #c5c8dc;
+}
+
+/* 6. Base resets */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background-color: var(--k-bg-page);
+  color: var(--k-text-1);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+#root {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+::-webkit-scrollbar        { width: 5px; height: 5px; }
+::-webkit-scrollbar-track  { background: transparent; }
+::-webkit-scrollbar-thumb  { background: var(--k-scrollbar); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--k-text-3); }
