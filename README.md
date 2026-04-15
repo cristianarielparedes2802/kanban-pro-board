@@ -4,6 +4,14 @@ A high-performance project management dashboard built to demonstrate mastery of 
 
 This is a personal project developed to showcase my ability to implement scalable architectures and frontend software engineering best practices.
 
+**Live demo:** [https://kanban-pro-board.vercel.app](https://kanban-pro-board.vercel.app)
+
+## Screenshots
+
+![Login](./screenshots/login.png)
+
+![Dashboard](./screenshots/dashboard.png)
+
 ## Key Features
 
 - **Task Management:** Full Kanban workflow across four columns — *To Do*, *In Progress*, *In Review*, and *Done*.
@@ -59,7 +67,7 @@ To demonstrate a deep understanding of the React ecosystem, the following concep
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/kanban-pro-board.git
+   git clone https://github.com/cristianarielparedes2802/kanban-pro-board.git
    cd kanban-pro-board
    ```
 
