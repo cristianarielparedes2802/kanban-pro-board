@@ -51,8 +51,8 @@ const BoardCard = memo(function BoardCard({ taskId, onEdit, onDelete }) {
           </h3>
         </div>
 
-        {/* Actions — visible on hover */}
-        <div className="flex gap-0.5 flex-shrink-0 opacity-0 group-hover:opacity-100 transition-opacity duration-100">
+        {/* Actions — always visible on touch, hover-only on desktop */}
+        <div className="flex gap-0.5 flex-shrink-0 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-100">
           <button
             onPointerDown={(e) => e.stopPropagation()}
             onClick={(e) => { e.stopPropagation(); onEdit?.(task) }}

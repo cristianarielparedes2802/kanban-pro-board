@@ -2,7 +2,8 @@ import { useState, useCallback, useMemo } from 'react'
 import {
   useSensor,
   useSensors,
-  PointerSensor,
+  MouseSensor,
+  TouchSensor,
   pointerWithin,
   rectIntersection,
 } from '@dnd-kit/core'
@@ -20,9 +21,13 @@ export function useKanban() {
   const [activeTaskId, setActiveTaskId] = useState(null)
 
   const sensors = useSensors(
-    useSensor(PointerSensor, {
-      // Require 8px movement before starting drag (prevents accidental drags)
+    useSensor(MouseSensor, {
+      // Require 8px movement before starting drag (prevents accidental drags on desktop)
       activationConstraint: { distance: 8 },
+    }),
+    useSensor(TouchSensor, {
+      // Require 250ms hold before starting drag on touch devices (allows tap/scroll first)
+      activationConstraint: { delay: 250, tolerance: 5 },
     }),
   )
 

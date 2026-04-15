@@ -12,7 +12,7 @@ const BoardColumn = memo(function BoardColumn({ column, onAddTask, onEditTask, o
   const { setNodeRef, isOver } = useDroppable({ id: column.id })
 
   return (
-    <div className="flex flex-col w-72 flex-shrink-0">
+    <div className="flex flex-col w-[85vw] md:w-72 flex-shrink-0 snap-center">
       {/* ── Header ── */}
       <div className="flex items-center justify-between mb-3 px-0.5">
         <div className="flex items-center gap-2">

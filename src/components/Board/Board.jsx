@@ -46,7 +46,7 @@ function Board() {
         onDragCancel={handleDragCancel}
       >
         {/* ── Columns layout ── */}
-        <div className="flex gap-5 overflow-x-auto pb-8 px-6 pt-2 min-h-0 flex-1">
+        <div className="flex gap-5 overflow-x-auto pb-8 px-6 pt-2 min-h-0 flex-1 snap-x snap-mandatory md:snap-none scroll-smooth">
           {columns.map((column) => (
             <BoardColumn
               key={column.id}
