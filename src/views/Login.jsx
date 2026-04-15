@@ -67,7 +67,7 @@ export default function Login() {
             Kanban Board
           </h1>
           <p className="mt-1 text-sm" style={{ color: 'var(--k-text-3)' }}>
-            Inicia sesión para continuar
+            Sign in to continue
           </p>
         </div>
 
@@ -97,7 +97,7 @@ export default function Login() {
 
             <div>
               <label className="block text-xs font-medium mb-1.5" style={{ color: 'var(--k-text-2)' }}>
-                Contraseña
+                Password
               </label>
               <input
                 type="password"
@@ -123,12 +123,12 @@ export default function Login() {
               disabled={loading}
               className="w-full mt-1 py-2.5 rounded-xl text-sm font-semibold bg-amber-500 hover:bg-amber-400 text-zinc-900 transition-colors cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {loading ? 'Verificando…' : 'Ingresar'}
+              {loading ? 'Verifying…' : 'Sign in'}
             </button>
           </form>
 
           <p className="mt-4 text-center text-xs" style={{ color: 'var(--k-text-4)' }}>
-            Demo: cualquier email y contraseña funcionan
+            Demo: any non-empty email and password will work
           </p>
         </div>
       </div>

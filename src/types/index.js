@@ -61,38 +61,38 @@ export const DEFAULT_LABELS = [
 /** @type {Task[]} */
 export const DEFAULT_TASKS = [
   {
-    id: 'task-1', title: 'Diseñar sistema de autenticación',
-    description: 'Definir flujo OAuth + JWT con refresh tokens.',
+    id: 'task-1', title: 'Design authentication system',
+    description: 'Define OAuth + JWT flow with refresh tokens.',
     columnId: 'todo', labelIds: ['feat', 'docs'], priority: 'high',
     createdAt: new Date().toISOString(), order: 0,
   },
   {
-    id: 'task-2', title: 'Optimizar consultas de la API',
-    description: 'Revisar N+1 queries en endpoint de usuarios.',
+    id: 'task-2', title: 'Optimize API queries',
+    description: 'Fix N+1 queries on the users endpoint.',
     columnId: 'todo', labelIds: ['perf', 'bug'], priority: 'medium',
     createdAt: new Date().toISOString(), order: 1,
   },
   {
-    id: 'task-3', title: 'Implementar Drag & Drop en Kanban',
-    description: 'Usar @dnd-kit con virtualización para listas largas.',
+    id: 'task-3', title: 'Implement Drag & Drop in Kanban',
+    description: 'Use @dnd-kit with virtualization for long lists.',
     columnId: 'in-progress', labelIds: ['feat'], priority: 'high',
     createdAt: new Date().toISOString(), order: 0,
   },
   {
     id: 'task-4', title: 'Setup CI/CD pipeline',
-    description: 'GitHub Actions → build → test → deploy a Vercel.',
+    description: 'GitHub Actions → build → test → deploy to Vercel.',
     columnId: 'in-progress', labelIds: ['docs'], priority: 'low',
     createdAt: new Date().toISOString(), order: 1,
   },
   {
     id: 'task-5', title: 'Review PR #42 – Dark Mode',
-    description: 'Verificar contraste WCAG AA en todos los componentes.',
+    description: 'Verify WCAG AA contrast ratio across all components.',
     columnId: 'review', labelIds: ['design', 'test'], priority: 'medium',
     createdAt: new Date().toISOString(), order: 0,
   },
   {
-    id: 'task-6', title: 'Publicar documentación técnica',
-    description: 'Generar Storybook y subir a GitHub Pages.',
+    id: 'task-6', title: 'Publish technical documentation',
+    description: 'Generate Storybook and deploy to GitHub Pages.',
     columnId: 'done', labelIds: ['docs'], priority: 'low',
     createdAt: new Date().toISOString(), order: 0,
   },
@@ -109,7 +109,7 @@ export const MOCK_USER = {
 // ─── Priority config ─────────────────────────────────────────────────────────
 
 export const PRIORITY_CONFIG = {
-  high:   { label: 'Alta',   class: 'text-red-400',    dot: 'bg-red-400'    },
-  medium: { label: 'Media',  class: 'text-amber-400',  dot: 'bg-amber-400'  },
-  low:    { label: 'Baja',   class: 'text-slate-400',  dot: 'bg-slate-400'  },
+  high:   { label: 'High',   class: 'text-red-400',    dot: 'bg-red-400'    },
+  medium: { label: 'Medium', class: 'text-amber-400',  dot: 'bg-amber-400'  },
+  low:    { label: 'Low',    class: 'text-slate-400',  dot: 'bg-slate-400'  },
 }

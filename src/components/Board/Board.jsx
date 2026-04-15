@@ -85,7 +85,7 @@ function Board() {
       <Modal
         open={modal.open}
         onClose={closeModal}
-        title={modal.mode === 'add' ? 'Nueva tarea' : 'Editar tarea'}
+        title={modal.mode === 'add' ? 'New task' : 'Edit task'}
       >
         <TaskForm
           task={modal.task}

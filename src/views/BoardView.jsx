@@ -29,7 +29,7 @@ function FilterBar() {
         </svg>
         <input
           type="text"
-          placeholder="Buscar…"
+          placeholder="Search…"
           value={filter.search}
           onChange={setSearch}
           className="rounded-xl pl-8 pr-3 py-1.5 text-xs transition-colors w-36 outline-none"
@@ -62,9 +62,9 @@ function FilterBar() {
         style={{ backgroundColor: 'var(--k-bg-input)', borderColor: 'var(--k-border-input)' }}
       >
         {[
-          { val: 'high',   label: 'Alta',  dot: 'bg-red-400',   active: 'bg-red-500/20 text-red-300 border-red-500/30'       },
-          { val: 'medium', label: 'Media', dot: 'bg-amber-400', active: 'bg-amber-500/20 text-amber-300 border-amber-500/30' },
-          { val: 'low',    label: 'Baja',  dot: 'bg-slate-400', active: 'bg-zinc-600/40 text-zinc-300 border-zinc-500/30'    },
+          { val: 'high',   label: 'High',   dot: 'bg-red-400',   active: 'bg-red-500/20 text-red-300 border-red-500/30'       },
+          { val: 'medium', label: 'Medium', dot: 'bg-amber-400', active: 'bg-amber-500/20 text-amber-300 border-amber-500/30' },
+          { val: 'low',    label: 'Low',    dot: 'bg-slate-400', active: 'bg-zinc-600/40 text-zinc-300 border-zinc-500/30'    },
         ].map(({ val, label, dot, active }) => (
           <button
             key={val}
@@ -89,7 +89,7 @@ function FilterBar() {
           className="text-xs transition-colors underline underline-offset-2 cursor-pointer hover:text-amber-400"
           style={{ color: 'var(--k-text-3)' }}
         >
-          Limpiar
+          Clear
         </button>
       )}
     </div>
@@ -125,7 +125,7 @@ function BoardHeader() {
             Kanban Board
           </h1>
           <p className="text-[10px] mt-0.5 font-mono" style={{ color: 'var(--k-text-4)' }}>
-            {isFiltered ? `${filteredTasks.length} / ${tasks.length} tareas` : `${tasks.length} tareas`}
+            {isFiltered ? `${filteredTasks.length} / ${tasks.length} tasks` : `${tasks.length} tasks`}
           </p>
         </div>
       </div>
@@ -138,7 +138,7 @@ function BoardHeader() {
         {/* Theme toggle */}
         <button
           onClick={toggleTheme}
-          title={theme === 'dark' ? 'Modo claro' : 'Modo oscuro'}
+          title={theme === 'dark' ? 'Light mode' : 'Dark mode'}
           className="w-8 h-8 flex items-center justify-center rounded-xl border transition-all duration-150 cursor-pointer hover:border-amber-500/40"
           style={{ backgroundColor: 'var(--k-bg-input)', borderColor: 'var(--k-border)', color: 'var(--k-text-2)' }}
         >
@@ -172,7 +172,7 @@ function BoardHeader() {
           className="text-xs px-3 py-1.5 rounded-lg border transition-colors cursor-pointer hover:text-red-400 hover:border-red-500/30"
           style={{ color: 'var(--k-text-3)', borderColor: 'var(--k-border)' }}
         >
-          Salir
+          Sign out
         </button>
       </div>
     </header>

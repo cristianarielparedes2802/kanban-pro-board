@@ -39,7 +39,7 @@ const BoardColumn = memo(function BoardColumn({ column, onAddTask, onEditTask, o
           onClick={() => onAddTask?.(column.id)}
           className="w-6 h-6 flex items-center justify-center rounded-lg transition-colors hover:text-amber-400"
           style={{ color: 'var(--k-text-4)' }}
-          title={`Agregar tarea en ${column.title}`}
+          title={`Add task to ${column.title}`}
         >
           <svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor">
             <path d="M7.75 2a.75.75 0 0 1 .75.75V7h4.25a.75.75 0 0 1 0 1.5H8.5v4.25a.75.75 0 0 1-1.5 0V8.5H2.75a.75.75 0 0 1 0-1.5H7V2.75A.75.75 0 0 1 7.75 2Z"/>
@@ -78,7 +78,7 @@ const BoardColumn = memo(function BoardColumn({ column, onAddTask, onEditTask, o
                 className="w-8 h-8 rounded-xl border-2 border-dashed opacity-20"
                 style={{ borderColor: column.accentVar }}
               />
-              <p className="text-xs" style={{ color: 'var(--k-text-4)' }}>Sin tareas</p>
+              <p className="text-xs" style={{ color: 'var(--k-text-4)' }}>No tasks</p>
             </div>
           )}
         </div>

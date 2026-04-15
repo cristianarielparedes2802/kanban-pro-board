@@ -36,11 +36,11 @@ export default function TaskForm({ task, onSubmit, onCancel }) {
       {/* Title */}
       <div>
         <label className="block text-xs font-medium mb-1.5" style={{ color: 'var(--k-text-2)' }}>
-          Título <span className="text-red-400">*</span>
+          Title <span className="text-red-400">*</span>
         </label>
         <input
           style={inputStyle}
-          placeholder="Ej: Diseñar sistema de autenticación…"
+          placeholder="e.g. Design authentication system…"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           onFocus={e => e.target.style.borderColor = 'rgba(240,165,0,0.5)'}
@@ -52,11 +52,11 @@ export default function TaskForm({ task, onSubmit, onCancel }) {
       {/* Description */}
       <div>
         <label className="block text-xs font-medium mb-1.5" style={{ color: 'var(--k-text-2)' }}>
-          Descripción
+          Description
         </label>
         <textarea
           style={{ ...inputStyle, resize: 'none', height: '5rem' }}
-          placeholder="Detalles opcionales…"
+          placeholder="Optional details…"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
           onFocus={e => e.target.style.borderColor = 'rgba(240,165,0,0.5)'}
@@ -67,7 +67,7 @@ export default function TaskForm({ task, onSubmit, onCancel }) {
       {/* Priority */}
       <div>
         <label className="block text-xs font-medium mb-1.5" style={{ color: 'var(--k-text-2)' }}>
-          Prioridad
+          Priority
         </label>
         <div className="flex gap-2">
           {Object.entries(PRIORITY_CONFIG).map(([key, cfg]) => (
@@ -92,7 +92,7 @@ export default function TaskForm({ task, onSubmit, onCancel }) {
       {/* Labels */}
       <div>
         <label className="block text-xs font-medium mb-1.5" style={{ color: 'var(--k-text-2)' }}>
-          Etiquetas
+          Labels
         </label>
         <div className="flex flex-wrap gap-1.5">
           {labels.map((label) => (
@@ -118,14 +118,14 @@ export default function TaskForm({ task, onSubmit, onCancel }) {
           className="px-4 py-2 rounded-xl text-sm transition-colors cursor-pointer hover:bg-black/10"
           style={{ color: 'var(--k-text-2)' }}
         >
-          Cancelar
+          Cancel
         </button>
         <button
           type="submit"
           disabled={!title.trim()}
           className="px-4 py-2 rounded-xl text-sm font-semibold bg-amber-500 hover:bg-amber-400 text-zinc-900 transition-colors cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed"
         >
-          {task ? 'Guardar cambios' : 'Crear tarea'}
+          {task ? 'Save changes' : 'Create task'}
         </button>
       </div>
     </form>

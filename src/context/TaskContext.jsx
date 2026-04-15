@@ -25,7 +25,7 @@ export function AuthProvider({ children }) {
   const login = useCallback((email, password) => {
     // Mock validation – any non-empty credentials pass
     if (!email.trim() || !password.trim()) {
-      return { ok: false, error: 'Credenciales requeridas.' }
+      return { ok: false, error: 'Credentials are required.' }
     }
     // Simulate a token check
     const fakeToken = btoa(`${email}:${Date.now()}`)
