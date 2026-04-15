@@ -84,7 +84,7 @@ export default function Login() {
               <input
                 type="email"
                 style={inputStyle}
-                placeholder="tu@email.com"
+                placeholder="your@email.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 onFocus={e => e.target.style.borderColor = 'rgba(240,165,0,0.5)'}
