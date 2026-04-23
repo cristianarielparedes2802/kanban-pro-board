@@ -102,7 +102,7 @@ const BoardCard = memo(function BoardCard({ taskId, onEdit, onDelete }) {
       {/* Footer */}
       <div className="mt-3 flex items-center justify-between">
         <span className="font-mono text-[10px]" style={{ color: 'var(--k-text-4)' }}>
-          {new Date(task.createdAt).toLocaleDateString('es-AR', { day: '2-digit', month: 'short' })}
+          {new Date(task.createdAt).toLocaleDateString('en-US', { day: '2-digit', month: 'short' })}
         </span>
         <span className={`font-mono text-[10px] ${priority.class}`}>
           {priority.label}
